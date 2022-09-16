@@ -1,5 +1,5 @@
 {
-    "manifest_version": "1",
-    "version": "1",
-    "name": "internet-phone"
+	"manifest_version": "1.0",
+	"version": "1.0",
+	"name": "peer-server"
 }
