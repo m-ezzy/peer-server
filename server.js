@@ -8,11 +8,13 @@ const server = http.createServer(app);
 const port = process.env.PORT || "8000";
 
 const peerServer = ExpressPeerServer(server, {
+    allow_discovery: true,
     proxied: true,
     debug: true,
     path: '/internet-phone',
-    port: 9000,
-    //ssl: {}
+    port: 443,
+    //ssl: {},
+    secure: true
 });
 
 app.use(peerServer);
