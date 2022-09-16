@@ -12,7 +12,7 @@ const peerServer = ExpressPeerServer(server, {
 	proxied: true,
 	debug: true,
 	path: '/internet-phone',
-	port: 443,
+	port: 80,
 	//ssl: {},
 	secure: true
 });
