@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "build": "peerjs --port 443 --key peerjs --path /internet-phone"
+    "start": "node server.js"
+    /*"build": "peerjs --port 443 --key peerjs --path /internet-phone"*/
   },
   "author": "",
   "license": "ISC",
