@@ -1,3 +1,3 @@
 cd D:\programming\nodejs-expressjs\peer-server
-node server.js
+peerjs --port 9000 --key peerjs --path /
 cmd/k
