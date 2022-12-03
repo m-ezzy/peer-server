@@ -8,14 +8,14 @@ const app = express();
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer(app);
 
-const peerServer = ExpressPeerServer(httpServer, {
+const peerServer = ExpressPeerServer(httpsServer, {
 	allow_discovery: true,
 	debug: true,
 	proxied: true, //true / false
 	path: '/',
 	port: 443, //'' / 80 / 443
-	//secure: true, //true / false
-	//ssl: {}
+	secure: true, //true / false
+	ssl: {}
 });
 
 app.use(peerServer);
