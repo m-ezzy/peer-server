@@ -24,7 +24,9 @@ app.get('/', function (req, res) {
 	res.send('Hello World!');
 });
 
-httpServer.listen(port, () => {
+console.log(port);
+
+httpsServer.listen(port, () => {
 	console.log(`http server is listening on : ${port}`);
 });
 /*

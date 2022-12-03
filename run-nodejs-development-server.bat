@@ -1,3 +1,3 @@
 cd D:\programming\nodejs-expressjs\peer-server
-node server.js
+node index.js
 cmd/k
