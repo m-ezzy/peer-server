@@ -8,25 +8,25 @@ const app = express();
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer(app);
 
-const peerServer = ExpressPeerServer(httpsServer, {
+const peerServer = ExpressPeerServer(httpServer, {
 	allow_discovery: true,
 	debug: true,
 	proxied: true, //true / false
-	path: '/',
+	path: '/p',
 	port: 443, //'' / 80 / 443
 	secure: true, //true / false
 	ssl: {}
 });
 
-app.use(peerServer);
-
 app.get('/', function (req, res) {
 	res.send('Hello World!');
 });
 
+app.use(peerServer);
+
 console.log(port);
 
-httpsServer.listen(port, () => {
+httpServer.listen(port, () => {
 	console.log(`http server is listening on : ${port}`);
 });
 /*
